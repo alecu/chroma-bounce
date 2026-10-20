@@ -8,11 +8,11 @@ const machines = {
     downloads: [['Atmos tape','chroma.tap','.TAP'],['Cumana Reborn disk','CHROMA.HFE','.HFE'],['Cumana USB package','chroma-cumana-reborn.zip','.ZIP'],['Machine code','chroma.bin','.BIN'],['Microdisc disk image','chroma.dsk','.DSK']],
   },
   spectrum: {
-    button: 'RUN ON SPECTRUM', name: 'ZX SPECTRUM · 128K / ORIGINAL +2 · PAL', heading: 'A little race against the beam.',
-    description: 'The same credits, font and score, reworked for the Z80. A custom raster alternates the 128K’s two screens on every scanline, bringing the sunset stripes to a full-width, 256-pixel scroller.',
+    button: 'RUN ON SPECTRUM', name: 'ZX SPECTRUM · 128K / +2 / +2A / +3 · PAL', heading: 'A little race against the beam.',
+    description: 'The same credits, font and score, reworked for the Z80. A custom raster alternates the 128K’s two screens on every scanline for a full-width, 256-pixel scroller. Startup automatically selects the timing for 128K/+2 or +2A/+3.',
     engine: 'Running in JSSpeccy 3 · cycle-accurate Spectrum 128K and AY emulation',
-    note: 'Open the snapshot in a 128K Spectrum emulator, or select Tape Loader and load the TAP. Binary loads at $6000 and enters at $8000. Original +2 supported; +2A/+3 are outside this release.',
-    downloads: [['128K instant snapshot','chroma.z80','.Z80'],['Spectrum tape','chroma.tap','.TAP'],['Machine code','chroma.bin','.BIN']],
+    note: 'Use the snapshot for your emulator, load the universal TAP in 128 BASIC, or insert the +3 disk and choose Loader. The demo detects the timing family automatically. Binary loads at $6000 and enters at $8000.',
+    downloads: [['128K instant snapshot','chroma.z80','.Z80'],['+3 instant snapshot','chroma-plus3.z80','.Z80'],['+3 boot disk','chroma-plus3.dsk','.DSK'],['Universal Spectrum tape','chroma.tap','.TAP'],['Machine code','chroma.bin','.BIN']],
   },
 };
 const $ = id => document.getElementById(id);

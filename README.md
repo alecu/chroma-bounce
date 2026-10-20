@@ -2,7 +2,7 @@
 
 **Play both demos:** https://alecu.protocultura.net/chroma-bounce/
 
-A native Oric Atmos demo and its ZX Spectrum 128K port: large bouncing credits,
+A native Oric Atmos demo and its ZX Spectrum 128K-family port: large bouncing credits,
 flowing sunset scanlines, and an original three-channel AY soundtrack.
 
 Choose a machine, press **Run**, and the actual native demo executes in its
@@ -10,7 +10,8 @@ WebAssembly emulator. The site includes sound control, restart, stop, fullscreen
 recorded video fallbacks and direct downloads of the native binary assets.
 
 - Oric: TAP, BIN, Microdisc DSK, Cumana Reborn HFE and USB ZIP package.
-- Spectrum: TAP, BIN and instant-start 128K Z80 snapshot.
+- Spectrum: universal TAP/BIN, 128K and +3 snapshots, and a menu-loadable +3DOS disk.
+  The native code detects the timing family on 128K, +2, +2A and +3 at startup.
 
 This public repository contains the static site and release downloads. The
 original demo development repository remains private. GitHub Pages serves the
