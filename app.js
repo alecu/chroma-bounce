@@ -9,7 +9,7 @@ const machines = {
   },
   spectrum: {
     button: 'RUN ON SPECTRUM', name: 'ZX SPECTRUM · 128K / ORIGINAL +2 · PAL', heading: 'A little race against the beam.',
-    description: 'The same credits, font and score, reworked for the Z80. BIFROST*2 changes the Spectrum’s attributes in time with the beam for true 8×1 color across a 160-pixel window.',
+    description: 'The same credits, font and score, reworked for the Z80. A custom raster alternates the 128K’s two screens on every scanline, bringing the sunset stripes to a full-width, 256-pixel scroller.',
     engine: 'Running in JSSpeccy 3 · cycle-accurate Spectrum 128K and AY emulation',
     note: 'Open the snapshot in a 128K Spectrum emulator, or select Tape Loader and load the TAP. Binary loads at $6000 and enters at $8000. Original +2 supported; +2A/+3 are outside this release.',
     downloads: [['128K instant snapshot','chroma.z80','.Z80'],['Spectrum tape','chroma.tap','.TAP'],['Machine code','chroma.bin','.BIN']],

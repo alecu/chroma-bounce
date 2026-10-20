@@ -36,8 +36,10 @@ Commercial BASIC ROMs are not included: the Atmos demo uses an original CC0
 reset/interrupt shim; the Spectrum demo uses its self-contained native snapshot
 with zero-filled emulator ROM slots. These players are intended for Chroma Bounce.
 
-The Spectrum binary is powered by BIFROST*2 by Einar Saukas (20-column method
-suggested by Matt Westcott; z88dk adaptation by aralbrec). Its license and credits
-are preserved in `licenses/bifrost2.txt`.
+The Spectrum binary uses a custom 32-column raster, switching between screen
+banks 5 and 7 on alternate scanlines. Each line has a uniform ink/paper pair.
+The earlier 20-column port used BIFROST*2 by Einar Saukas (method suggested by
+Matt Westcott; z88dk adaptation by aralbrec); its historical credits and license
+remain in `licenses/bifrost2.txt`.
 
 `manifest.json` records emulator versions and SHA-256 hashes of the release files.

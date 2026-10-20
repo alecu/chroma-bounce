@@ -47,28 +47,28 @@
       "sha256": "ef068fef77cc21552306d0339141d7d9945f9c7229a8287b9b1d8aab10c56c29"
     },
     "downloads/spectrum/chroma.tap": {
-      "bytes": 40791,
-      "sha256": "64c48a7aec2bad21e55ba09379a38ecdbcb5e55b66e6f6d75615005e3f07c650"
+      "bytes": 24407,
+      "sha256": "bd5750894269c843e01242db96ba4da976cd2269366aaf3c5407e6f95eadb57d"
     },
     "downloads/spectrum/chroma.bin": {
-      "bytes": 40705,
-      "sha256": "a3140dc0479c149a80e47a43ba00ebab25706e0b0b3de82a4baede5048081d62"
+      "bytes": 24321,
+      "sha256": "7e3644301085ff3e1af2fdc04ed724fd190fd8ec2a542df3c33c141c11f1ed42"
     },
     "downloads/spectrum/chroma.z80": {
       "bytes": 131182,
-      "sha256": "9334377dd1628065ed50871a792ac4a428a10478e63917596c0d115df83915f8"
+      "sha256": "71dda4730691d9caec5109d80fc1e9645bd68e4791d86bde88691a5c01edebb5"
     },
     "downloads/spectrum/screenshot.png": {
-      "bytes": 3786,
-      "sha256": "5a1726983f45423b2f4433b51a8b9fe84b2ab341f1a7083c200817abfb58fc17"
+      "bytes": 3660,
+      "sha256": "9925d951b8d9be408a4b9f07024a1d55b46e1e0bf568381261ff7afa2d8a9cfc"
     },
     "downloads/spectrum/startup.png": {
-      "bytes": 1878,
-      "sha256": "766129f0a5a0619dbf8bb62773cb0a856092e1c71f90ddeb51e6e11bff4a6101"
+      "bytes": 1370,
+      "sha256": "845cfbf41dcf4d8ed31aa1a0ef78788f1b8262beab924a31b183ab12dd6e1ccb"
     },
     "downloads/spectrum/preview.mp4": {
-      "bytes": 1222888,
-      "sha256": "829a060f59a94cea053c3b8f5f5e391af3b0314bc7c0f7e64c7a4544f7f440e1"
+      "bytes": 1475223,
+      "sha256": "f2a5fbf43fa01790af82117c7d2053643d0142d2be767d63fc646f565dbb581c"
     },
     "emulators/atmos/boot.rom": {
       "bytes": 16384,
