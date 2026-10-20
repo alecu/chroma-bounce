@@ -1,0 +1,110 @@
+{
+  "title": "Chroma Bounce",
+  "emulators": {
+    "atmos": {
+      "name": "Phosphoric",
+      "revision": "675cb06e02cf7c684377c5ae592dca7995d22097",
+      "rom": "original CC0 boot shim"
+    },
+    "spectrum": {
+      "name": "JSSpeccy",
+      "version": "3.2",
+      "release_sha256": "5434b5565da96a05089491f722c8fbcd8b3b70ab0277746309d2ee1db1fdbcb9",
+      "rom": "zero-filled placeholders; native 128K snapshot"
+    }
+  },
+  "files": {
+    "downloads/atmos/chroma.tap": {
+      "bytes": 18216,
+      "sha256": "753e4e5e73bf87d0fdd255bc1e662bf8378abdae7d6dd0e0cf5780caf392749d"
+    },
+    "downloads/atmos/chroma.bin": {
+      "bytes": 18183,
+      "sha256": "2587e29cffe030f16ed2da8aee7b9c9648b5abcda44170158429e4092a11c2f4"
+    },
+    "downloads/atmos/chroma.dsk": {
+      "bytes": 537856,
+      "sha256": "b38aa984c6b5e10fa6d6f362cc679712b90ae7f74d5958bb692838a88eb7d52f"
+    },
+    "downloads/atmos/CHROMA.HFE": {
+      "bytes": 1054720,
+      "sha256": "ce388210f36775d0958025a3549adecd0a439b86af3301ed6cef75231180e18a"
+    },
+    "downloads/atmos/chroma-cumana-reborn.zip": {
+      "bytes": 27266,
+      "sha256": "dae99ab5166318193737b07882ab0de52d69540d773ba034c2ffb4d30a28a92f"
+    },
+    "downloads/atmos/screenshot.png": {
+      "bytes": 18191,
+      "sha256": "ffc287d7799c68b5c795674f7ba5ead0093dd37038387fe8a5a8e411cfe6c86e"
+    },
+    "downloads/atmos/startup.png": {
+      "bytes": 17682,
+      "sha256": "59c606a86e5656b77e886ee12adacf1e1b49330b505af7cd32315c502463fe61"
+    },
+    "downloads/atmos/preview.mp4": {
+      "bytes": 8179974,
+      "sha256": "0a9651779aefdb2d63913ea5205082644c9a02b5294add3688c506f0af2c43df"
+    },
+    "downloads/spectrum/chroma.tap": {
+      "bytes": 40791,
+      "sha256": "abbf8a093ea0d5a7d463c29aca5373b580b0cda8762c55dacf175667533619d1"
+    },
+    "downloads/spectrum/chroma.bin": {
+      "bytes": 40705,
+      "sha256": "cbf6ebe80c6901c033af32bdb50476efa14072eb38e25826ad14bfcdb14bc219"
+    },
+    "downloads/spectrum/chroma.z80": {
+      "bytes": 131182,
+      "sha256": "5cc4d3b4510787af7322102e65f16e175bea15503d7a64cb5c0a26dc42792f46"
+    },
+    "downloads/spectrum/screenshot.png": {
+      "bytes": 3590,
+      "sha256": "1c675909552d4b8192dcacd451d11134a6f44fe3c6eced81d675d6ce1194a655"
+    },
+    "downloads/spectrum/startup.png": {
+      "bytes": 1731,
+      "sha256": "15b92a0ce2336f593e825026128abc92051363a55f4ab238f505b9398240a00a"
+    },
+    "downloads/spectrum/preview.mp4": {
+      "bytes": 1207043,
+      "sha256": "a59aa754befbecc516a7e1a2c5c00f79c24f208cec9fcef6f7bfd2686a5721ce"
+    },
+    "emulators/atmos/boot.rom": {
+      "bytes": 16384,
+      "sha256": "e28d0716ce3180fcafa2c346f470d0b9002e245ff12d49018e6090902960dfd5"
+    },
+    "emulators/atmos/phosphoric.data": {
+      "bytes": 16384,
+      "sha256": "e28d0716ce3180fcafa2c346f470d0b9002e245ff12d49018e6090902960dfd5"
+    },
+    "emulators/atmos/phosphoric.wasm": {
+      "bytes": 1677410,
+      "sha256": "cc94981f054743c91760e18c145213c75761dfbfc4e3e5b1abb1b30a0368dff5"
+    },
+    "emulators/spectrum/jsspeccy-core.wasm": {
+      "bytes": 139142,
+      "sha256": "b8ea049ced002e39f3e32203c3d08f2efa964437887c92c39dd22e50945d7438"
+    },
+    "emulators/spectrum/roms/128-0.rom": {
+      "bytes": 16384,
+      "sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "emulators/spectrum/roms/128-1.rom": {
+      "bytes": 16384,
+      "sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "emulators/spectrum/roms/48.rom": {
+      "bytes": 16384,
+      "sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "emulators/spectrum/roms/pentagon-0.rom": {
+      "bytes": 16384,
+      "sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    "emulators/spectrum/roms/trdos.rom": {
+      "bytes": 16384,
+      "sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    }
+  }
+}

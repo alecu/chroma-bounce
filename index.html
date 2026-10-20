@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Chroma Bounce: a sunset-colored demoscene scroller for the Oric Atmos and ZX Spectrum. Run both native demos in your browser or download them for real hardware.">
+  <meta name="theme-color" content="#101116">
+  <title>Chroma Bounce — Atmos & Spectrum</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <header><a class="wordmark" href="./" aria-label="Chroma Bounce home">ALECU / ATMOSPHERE</a><span class="edition">FLASHPARTY 2026</span></header>
+  <section class="intro" aria-labelledby="title"><div><p class="eyebrow">TWO MACHINES. ONE SUNSET.</p><h1 id="title">CHROMA <span>BOUNCE.</span></h1></div><p class="lede">Big letters. Bouncy waves. Color by the scanline.<br>An original AY soundtrack, on two very different machines.</p></section>
+  <div class="tabs" role="tablist" aria-label="Choose your machine">
+    <button role="tab" id="tab-atmos" aria-selected="true" aria-controls="demo-panel" data-machine="atmos"><span class="tab-number">01</span> ORIC ATMOS <span class="tab-spec">48K / 6502</span></button>
+    <button role="tab" id="tab-spectrum" aria-selected="false" aria-controls="demo-panel" tabindex="-1" data-machine="spectrum"><span class="tab-number">02</span> ZX SPECTRUM <span class="tab-spec">128K / Z80</span></button>
+  </div>
+  <section id="demo-panel" role="tabpanel" aria-labelledby="tab-atmos">
+    <div class="sunset"></div>
+    <div class="screen" id="screen">
+      <img id="poster" src="downloads/atmos/screenshot.png" alt="Oric Atmos demo with large letters bouncing through sunset-colored scanlines">
+      <div id="emulator"></div>
+      <div id="cover"><button id="start" class="run"><span aria-hidden="true">▶</span> RUN ON ATMOS</button><p id="cover-note">Live emulation · sound on</p></div>
+    </div>
+    <div class="controls">
+      <span id="status" role="status" aria-live="polite"><i></i> READY TO RUN</span>
+      <div class="buttons"><button id="stop" disabled>STOP</button><button id="restart" disabled>RESTART</button><button id="sound" aria-pressed="false">SOUND ON</button><button id="fullscreen">FULLSCREEN <span aria-hidden="true">↗</span></button></div>
+    </div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <div class="info"><div><p class="eyebrow" id="machine-name">ORIC ATMOS · 48K · PAL</p><h2 id="machine-heading">The original Atmos experiment.</h2><p id="machine-description">A native 6502 demo with a 228-pixel scroller, alternating sunset inks and a three-voice AY soundtrack. Built for the Atmos, with a bootable Cumana Reborn disk.</p><p class="engine" id="engine-name">Running in Phosphoric · complete Oric CPU, ULA, VIA and AY emulation</p></div>
+      <aside aria-labelledby="downloads-heading"><h3 id="downloads-heading">TAKE IT TO YOUR MACHINE <span>↓</span></h3><ul id="downloads"><li><a href="downloads/atmos/chroma.tap" download>Atmos tape <span>.TAP</span></a></li><li><a href="downloads/atmos/CHROMA.HFE" download>Cumana Reborn disk <span>.HFE</span></a></li><li><a href="downloads/atmos/chroma-cumana-reborn.zip" download>Cumana USB package <span>.ZIP</span></a></li><li><a href="downloads/atmos/chroma.bin" download>Machine code <span>.BIN</span></a></li></ul><p id="load-note">Copy the HFE image to your Cumana Reborn USB stick, or load the TAP with CLOAD"". Binary entry: $0500.</p></aside>
+    </div>
+  </section>
+  <details class="recording"><summary>Prefer a recording? Watch the native capture.</summary><video id="recording" controls playsinline preload="none" poster="downloads/atmos/screenshot.png"><source src="downloads/atmos/preview.mp4" type="video/mp4"></video><p>Recorded from the native demo running in a full-machine emulator.</p></details>
+  <footer><p>Original pixel font & AY score · Shared credits scroller<br><a href="credits.html">Emulator credits, licenses & source</a></p><p>Best with sound.<br><span>Made for machines that make you count cycles.</span></p></footer>
+</main>
+</body>
+</html>
