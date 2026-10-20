@@ -17,9 +17,10 @@ const machines = {
 };
 const $ = id => document.getElementById(id);
 let selected = new URLSearchParams(location.search).get('machine') === 'spectrum' ? 'spectrum' : 'atmos';
-let frame = null, running = false, muted = false;
+let frame = null, running = false, muted = false, bootTimer = null;
 function status(text) { $('status').replaceChildren(Object.assign(document.createElement('i'), {}), document.createTextNode(text)); }
 function stop() {
+  clearTimeout(bootTimer);
   if (frame) { frame.src = 'about:blank'; frame.remove(); frame = null; }
   running = false;
   $('cover').hidden = false;
@@ -47,6 +48,7 @@ function select(machine, focus = false) {
   $('poster').src = `downloads/${machine}/screenshot.png`;
   $('poster').alt = `${machine === 'atmos' ? 'Oric Atmos' : 'ZX Spectrum'} demo with bouncing, sunset-striped lettering`;
   $('error').hidden = true;
+  $('cover-note').textContent = `Live emulation · sound ${muted ? 'off' : 'on'}`;
   $('downloads').replaceChildren(...info.downloads.map(([label, filename, extension]) => {
     const li = document.createElement('li'), a = document.createElement('a'), ext = document.createElement('span');
     a.href = `downloads/${machine}/${filename}`; a.download = filename;
@@ -69,13 +71,19 @@ function start() {
   frame.allow = 'autoplay; fullscreen';
   frame.src = `emulators/${selected}/index.html?muted=${muted ? '1' : '0'}`;
   $('emulator').append(frame);
+  bootTimer = setTimeout(() => {
+    stop();
+    $('error').textContent = 'The emulator took too long to start. Try Run again, download the demo, or watch the recording below.';
+    $('error').hidden = false;
+  },45000);
   $('cover').hidden = true;
   $('stop').disabled = false;
   $('restart').disabled = false;
 }
 window.addEventListener('message', event => {
   if (event.origin !== location.origin || !frame || event.source !== frame.contentWindow || event.data?.source !== 'chroma-emulator') return;
-  if (event.data.type === 'ready') { $('poster').hidden = true; status('LIVE · NATIVE DEMO / AY SOUND'); }
+  if (event.data.type === 'ready') { clearTimeout(bootTimer); $('poster').hidden = true; status('LIVE · NATIVE DEMO / AY SOUND'); }
+  if (event.data.type === 'exitFullscreen') leaveFullscreen();
   if (event.data.type === 'loading') status(event.data.message);
   if (event.data.type === 'error') {
     const message = event.data.message; stop();
@@ -97,11 +105,23 @@ $('restart').addEventListener('click', () => { stop(); start(); });
 $('sound').addEventListener('click', () => {
   muted = !muted;
   $('sound').textContent = muted ? 'SOUND OFF' : 'SOUND ON'; $('sound').setAttribute('aria-pressed', String(muted));
+  $('cover-note').textContent = `Live emulation · sound ${muted ? 'off' : 'on'}`;
   frame?.contentWindow.postMessage({type:'chroma:mute', muted}, location.origin);
 });
+function expanded(value) {
+  $('screen').classList.toggle('expanded',value);
+  $('leave-fullscreen').hidden = !value;
+}
+async function leaveFullscreen() {
+  if (document.fullscreenElement) { try { await document.exitFullscreen(); } catch {} }
+  expanded(false);
+}
 $('fullscreen').addEventListener('click', async () => {
-  try { if (document.fullscreenElement) await document.exitFullscreen(); else await $('screen').requestFullscreen(); }
-  catch { status('FULLSCREEN IS NOT AVAILABLE IN THIS BROWSER'); }
+  if ($('screen').classList.contains('expanded')) { await leaveFullscreen(); return; }
+  // The full-window layout also works in embedded browsers without native fullscreen.
+  expanded(true);
 });
+$('leave-fullscreen').addEventListener('click',leaveFullscreen);
+document.addEventListener('keydown',event => { if (event.key === 'Escape') leaveFullscreen(); });
 $('recording').addEventListener('play', () => { if (running) stop(); });
 select(selected);

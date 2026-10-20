@@ -36,6 +36,7 @@
     document.body.append(button); refresh();
   });
   document.addEventListener('pointerdown', updateAudio);
+  document.addEventListener('keydown',event => { if (event.key === 'Escape') notify('exitFullscreen'); });
   window.addEventListener('message', event => {
     if (event.origin !== location.origin || event.source !== parent) return;
     if (event.data?.type === 'chroma:mute') { muted = Boolean(event.data.muted); updateAudio(); }

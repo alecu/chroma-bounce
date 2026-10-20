@@ -1,6 +1,6 @@
 # Chroma Bounce
 
-**Play both demos:** https://alecu.github.io/chroma-bounce/
+**Play both demos:** https://alecu.protocultura.net/chroma-bounce/
 
 A native Oric Atmos demo and its ZX Spectrum 128K port: large bouncing credits,
 flowing sunset scanlines, and an original three-channel AY soundtrack.
